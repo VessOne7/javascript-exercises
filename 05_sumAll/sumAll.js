@@ -1,6 +1,6 @@
 const sumAll = function(firstNum, lastNum) {
     let sum = 0;
-    if(((firstNum && lastNum) <= 0) || (typeof (firstNum || lastNum) != number)) {
+    if ((firstNum < 0 || lastNum < 0) || ((typeof firstNum != "number") || (typeof lastNum != "number"))) {
         return "ERROR"
     } else if (firstNum < lastNum) {
           for (let i = firstNum; i <= lastNum; i++) {
